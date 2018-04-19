@@ -1,12 +1,10 @@
-const lottie = require('lottie-web')
-const data = require('./data.json')
+import lottie from 'lottie-web'
+import data from './data.json'
 
 var anim = lottie.loadAnimation({
-  container: document.getElementById('bm'), // the dom element that will contain the animation
+  container: document.getElementById('bm'),
   renderer: 'svg',
   loop: true,
   autoplay: true,
-  animationData: data // the path to the animation json
+  animationData: data
 })
-
-anim.play()
