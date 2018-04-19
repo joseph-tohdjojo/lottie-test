@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "rm-cli -r dist/ && parcel src/index.html",
-    "build": "rm-cli -r dist/ && parcel build src/index.html"
+    "build": "parcel build src/index.html"
   },
   "keywords": [],
   "author": "",
