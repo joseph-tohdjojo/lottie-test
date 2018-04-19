@@ -13,6 +13,5 @@ var anim = lottie.loadAnimation({
 })
 
 window.addEventListener('click', ev => anim.goToAndPlay(0, true))
-anim.addEventListener('complete', ev => {
-  replay.style.opacity = 1
-})
+window.addEventListener('touchend', ev => anim.goToAndPlay(0, true))
+anim.addEventListener('complete', ev => (replay.style.opacity = 1))
