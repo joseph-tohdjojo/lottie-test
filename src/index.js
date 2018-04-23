@@ -11,19 +11,17 @@ var anim = lottie.loadAnimation({
   animationData: data
 })
 
-window.addEventListener('mousedown', ev => {
+const forward = ev => {
   anim.setDirection(1)
   anim.play()
-})
-window.addEventListener('touchstart', ev => {
-  anim.setDirection(1)
-  anim.play()
-})
-window.addEventListener('mouseup', ev => {
+}
+
+const backward = ev => {
   anim.setDirection(-1)
   anim.play()
-})
-window.addEventListener('touchend', ev => {
-  anim.setDirection(-1)
-  anim.play()
-})
+}
+
+window.addEventListener('mousedown', forward)
+window.addEventListener('touchstart', forward)
+window.addEventListener('mouseup', backward)
+window.addEventListener('touchend', backward)
