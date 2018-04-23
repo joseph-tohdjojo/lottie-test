@@ -15,7 +15,15 @@ window.addEventListener('mousedown', ev => {
   anim.setDirection(1)
   anim.play()
 })
+window.addEventListener('touchstart', ev => {
+  anim.setDirection(1)
+  anim.play()
+})
 window.addEventListener('mouseup', ev => {
+  anim.setDirection(-1)
+  anim.play()
+})
+window.addEventListener('touchend', ev => {
   anim.setDirection(-1)
   anim.play()
 })
